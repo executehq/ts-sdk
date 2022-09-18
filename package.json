@@ -4,14 +4,13 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test" : "skipping",
+    "test" : "echo skipping",
     "build": "tsc"
   },
-  "keywords": [],
+  "keywords": ["execute"],
   "author": "Ayush <ap@execute.dev>",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^5.0.1",
     "node-fetch": "2.6.7",
     "uuid": "^9.0.0"
   },
