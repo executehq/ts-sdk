@@ -1,9 +1,10 @@
 {
   "name": "execute.dev",
-  "version": "0.0.1-alpha.7",
+  "version": "0.0.1-alpha.8",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "test" : "skipping",
     "build": "tsc"
   },
   "keywords": [],
