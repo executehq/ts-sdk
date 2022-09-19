@@ -1,12 +1,15 @@
 import executeSdk from "../";
 describe("deploy", () => {
   test("should deploy", async () => {
-    const { execute, triggers, actions } = new executeSdk();
+    const { execute, triggers, actions } = new executeSdk(
+      "42475e1d-8aa0-47de-95e3-fea89990e170",
+      "$2b$10$18a8yZvdcks7uiAaOslIxO"
+    );
     const app = execute.new();
     await app
       .addTrigger(
-        triggers.eth.onEvent(
-          "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        triggers.polygon.onEvent(
+          "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
           "Transfer",
           [
             {
@@ -234,7 +237,7 @@ describe("deploy", () => {
       )
       .addAction(
         actions.callApi(
-          "https://httpdump.app/dumps/b3cf2c7b-7bb9-4fea-b6b2-d155bac61f10",
+          "https://httpdump.app/dumps/82b8b312-3c46-459c-ae08-28e1884815b7",
           "POST",
           {
             hi: "there",
