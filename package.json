@@ -4,10 +4,12 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test" : "echo skipping",
+    "test": "jest",
     "build": "tsc"
   },
-  "keywords": ["execute"],
+  "keywords": [
+    "execute"
+  ],
   "author": "Ayush <ap@execute.dev>",
   "license": "MIT",
   "dependencies": {
@@ -15,9 +17,12 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/jest": "^29.0.3",
     "@types/node": "^16.11.6",
     "@types/node-fetch": "^2.5.12",
     "@types/uuid": "^8.3.3",
+    "ts-jest": "^29.0.1",
     "typescript": "^4.5.2"
   }
 }

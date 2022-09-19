@@ -1,8 +1,7 @@
 import errorTypes from "../types/errors";
-import writeLogs from "../utils/writeLogs";
 export class ExecuteError extends Error {
   constructor(errors: string[], name?: string) {
-    const log = writeLogs(errors);
+    let log;
     let i = 1;
     let errorString = "";
     errorString += `\n\n$"Following errors were encountered while deploying your app:"`;

@@ -1,3 +1,4 @@
+/* eslint-disable turbo/no-undeclared-env-vars */
 import { Chains } from "./types";
 import { actionClient, triggerClient, apiClient } from "./clients";
 import { ExecuteError } from "./errors";
@@ -73,7 +74,7 @@ class raidApp {
       throw new ExecuteError(this.errors, "deploy");
     }
 
-    const { error, value } = await this.api.post("apps.deploy", null, {
+    const { error, value } = await this.api.post("apps", null, {
       metadata,
       triggers: this.triggers,
       actions: this.actions,
