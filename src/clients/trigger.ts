@@ -15,9 +15,6 @@ export default class triggerClient {
         trigger: "webhook",
         apiKey: apiKey,
       },
-      response: {
-        url: "string",
-      },
     };
   }
 }

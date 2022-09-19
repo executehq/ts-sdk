@@ -13,7 +13,7 @@ export class ExecuteError extends Error {
     if (log) {
       errorString += `\n\nru \`npx @execute.dev/cli troubleshoot ${log}\` to find out more`;
     } else {
-      errorString += `\n\nCouldn't write logs. Please report this to team@execute.dev`;
+      errorString += `\n\nPlease report this to support@execute.dev if you need help`;
     }
     console.log(errorString);
     super(`Errors: ${errors}`);

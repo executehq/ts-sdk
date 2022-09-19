@@ -232,7 +232,15 @@ describe("deploy", () => {
           ]
         )
       )
-      .addAction(actions.sendWebhook("https://eogezthfdg8epmt.m.pipedream.net"))
+      .addAction(
+        actions.callApi(
+          "https://httpdump.app/dumps/b3cf2c7b-7bb9-4fea-b6b2-d155bac61f10",
+          "POST",
+          {
+            hi: "there",
+          }
+        )
+      )
       .deploy();
   });
 });

@@ -1,17 +1,6 @@
 import Chains from "../types/chains";
 import ethActions from "./action.evm";
 
-enum apiCallMethods {
-  POST = "POST",
-  GET = "GET",
-  PUT = "PUT",
-  DELETE = "DELETE",
-}
-
-enum customCodeLanguages {
-  JAVASCRIPT = "javascript",
-}
-
 export default class actions {
   eth: ethActions;
   polygon: ethActions;
@@ -107,7 +96,4 @@ export default class actions {
     };
   }
 
-  // runCustomCode(
-  // COMING SOON ;)
-  // }
 }

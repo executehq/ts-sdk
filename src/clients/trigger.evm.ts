@@ -20,15 +20,4 @@ export default class actionClient {
       },
     };
   }
-
-  // onMethodCall(contractAddress: string, method: string) {
-  //   return {
-  //     value: {
-  //       platform: this.chain,
-  //       trigger: ethTriggerTypes.EVENT,
-  //       address: contractAddress,
-  //       name: method,
-  //     },
-  //   };
-  // }
 }

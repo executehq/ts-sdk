@@ -2,12 +2,12 @@
 import { Chains } from "./types";
 import { actionClient, triggerClient, apiClient } from "./clients";
 import { ExecuteError } from "./errors";
+
+
 interface metaData {
   name: string;
 }
-interface ExecuteOptions {
-  log?: boolean;
-}
+
 interface initialOptions {
   accessKey?: string;
   secretKey?: string;
@@ -35,9 +35,9 @@ class raidClient {
 
 class raidApp {
   private api: apiClient;
-  triggers: any[] = [];
-  actions: any[] = [];
-  errors: any = [];
+  private triggers: any[] = [];
+  private actions: any[] = [];
+  private errors: any = [];
 
   constructor(apiKey: string, secretKey: string) {
     this.api = new apiClient(apiKey, secretKey);
@@ -91,15 +91,10 @@ class sdk {
   execute: raidClient;
   actions: actionClient;
   triggers: triggerClient;
-  constructor(
-    accessKey?: string,
-    secretKey?: string,
-    options?: ExecuteOptions
-  ) {
+  constructor(accessKey?: string, secretKey?: string) {
     const finalOption = this.optionInjector({
       accessKey,
       secretKey,
-      ...options,
     });
     const x = new raidClient(finalOption.accessKey, finalOption.secretKey);
     this.execute = x;

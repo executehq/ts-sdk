@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-const apiUrl = "http://localhost:3000/v1";
+const apiUrl = "https://api.execute.dev";
 // const apiUrl = "https://api.execute.dev";
 
 export default class apiClient {
@@ -79,7 +79,6 @@ async function api(
   let url: string = `${apiUrl}/${endpoint}${
     finalQuery ? `?${finalQuery}` : ""
   }`;
-  console.log("url", url);
   const x = await fetch(url, requestOptions)
     .then(async (response: any) => {
       return { value: await response.json() };
