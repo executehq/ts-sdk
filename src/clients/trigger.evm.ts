@@ -16,7 +16,7 @@ export default class actionClient {
         trigger: ethTriggerTypes.EVENT,
         address: contractAddress,
         name: event,
-        abi: abi,
+        abi: JSON.stringify(abi),
       },
     };
   }

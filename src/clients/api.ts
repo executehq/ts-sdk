@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-// const apiUrl = "https://api.execute.dev";
+// const apiUrl = "https://api.execute.dev/v1";
 const apiUrl = "http://localhost:3000/v1";
 
 export default class apiClient {
